@@ -9,7 +9,10 @@ const Button = (props) => {
 const MostVotes = (props) => {
   const mostVoted = props.points.indexOf(Math.max(...props.points))
   return (
-    <p>{props.anecdotes[mostVoted]}</p>
+    <div>
+      <p>{props.anecdotes[mostVoted]}</p>
+      <p>has {props.points[mostVoted]} votes</p>
+    </div>
   )
 }
 
